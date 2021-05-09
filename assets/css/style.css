@@ -45,7 +45,7 @@ html {
 }
 
 .col-third {
-    width: 33.333%;
+    width: 33.3333%;
 }
 
 .col-half {
@@ -65,13 +65,19 @@ html {
 }
 
 .mt-16 {
-    margin-top: 8px !important;
+    margin-top: 16px !important;
+}
+
+.mt-32{
+    margin-top: 32px !important;
 }
 
 
 /*Main*/
 
-#main {}
+#main {
+  overflow: hidden;
+}
 
 #nav {
     display: inline-block;
@@ -84,6 +90,7 @@ html {
     position: fixed;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 #nav {}
@@ -139,16 +146,35 @@ html {
     font-size: 14px;
 }
 
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
     cursor: pointer;
 }
 
+
 #header .search-btn:hover {
+    cursor: pointer;
     background-color: red;
 }
 
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+
+#header .mobile-menu-btn:hover{
+    background-color:#ccc;
+}
+
+#header .menu-icon,
 #header .ti-search {
     font-size: 20px;
     line-height: 46px;
@@ -184,9 +210,12 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width:100%;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px ;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -215,14 +244,9 @@ html {
 }
 
 #content .member-list {
-    margin-top: 48px;
+    margin-top: 32px;
 }
 
-#content .member-item {
-    float: left;
-    width: 33.33%;
-    text-align: center;
-}
 
 #content .member-name {
     font-size: 15px;
@@ -266,7 +290,7 @@ html {
 }
 
 .place-list {
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 48px;
 }
 
@@ -305,6 +329,7 @@ html {
     text-decoration: none;
     display: inline-block;
     margin-top: 15px;
+    text-align: center;
 }
 
 .btn:hover {
@@ -368,3 +393,4 @@ html {
 #footer .copy-right {
     margin: 15px 0;
 }
+
